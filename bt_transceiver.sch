@@ -1,0 +1,308 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title "MP3 Player"
+Date "2021-02-28"
+Rev "1"
+Comp "github.com/sohunpatel"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RF_Bluetooth:RN42 U3
+U 1 1 60CA4A22
+P 5800 3950
+F 0 "U3" H 5800 5017 50  0000 C CNN
+F 1 "RN42" H 5800 4926 50  0000 C CNN
+F 2 "RF_Module:RN42" H 5750 4800 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/rn-42-ds-v2.32r.pdf" H 5800 3150 50  0001 C CNN
+	1    5800 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 4050 6500 4050
+Wire Wire Line
+	6550 4150 6500 4150
+Wire Wire Line
+	6550 4350 6500 4350
+Wire Wire Line
+	6500 4250 6550 4250
+NoConn ~ 5100 3850
+NoConn ~ 5100 3950
+NoConn ~ 5100 4050
+NoConn ~ 5100 4150
+NoConn ~ 5100 3750
+NoConn ~ 6500 3350
+NoConn ~ 6500 3250
+NoConn ~ 5100 3350
+NoConn ~ 6500 3850
+NoConn ~ 6500 3950
+$Comp
+L Device:R_Small R3
+U 1 1 60CA4A67
+P 7450 3550
+F 0 "R3" V 7646 3550 50  0000 C CNN
+F 1 "1k" V 7555 3550 50  0000 C CNN
+F 2 "" H 7450 3550 50  0001 C CNN
+F 3 "~" H 7450 3550 50  0001 C CNN
+	1    7450 3550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6500 3550 7350 3550
+$Comp
+L Device:LED_Small D3
+U 1 1 60CA4A6E
+P 7800 3550
+F 0 "D3" H 7800 3785 50  0000 C CNN
+F 1 "LED_Blue" H 7800 3694 50  0000 C CNN
+F 2 "" V 7800 3550 50  0001 C CNN
+F 3 "~" V 7800 3550 50  0001 C CNN
+	1    7800 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 3550 7550 3550
+$Comp
+L power:+3.3V #PWR0114
+U 1 1 60CA4A75
+P 8100 3450
+F 0 "#PWR0114" H 8100 3300 50  0001 C CNN
+F 1 "+3.3V" H 8115 3623 50  0000 C CNN
+F 2 "" H 8100 3450 50  0001 C CNN
+F 3 "" H 8100 3450 50  0001 C CNN
+	1    8100 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 3450 8100 3550
+Wire Wire Line
+	8100 3550 7900 3550
+Text HLabel 6550 4050 2    50   Output ~ 0
+UART_CTS
+Text HLabel 6550 4150 2    50   Input ~ 0
+UART_RTS
+Text HLabel 6550 4250 2    50   Output ~ 0
+UART_TX
+Text HLabel 6550 4350 2    50   Input ~ 0
+UART_RX
+$Comp
+L power:+3.3V #PWR?
+U 1 1 60488D4F
+P 4700 4150
+F 0 "#PWR?" H 4700 4000 50  0001 C CNN
+F 1 "+3.3V" H 4715 4323 50  0000 C CNN
+F 2 "" H 4700 4150 50  0001 C CNN
+F 3 "" H 4700 4150 50  0001 C CNN
+	1    4700 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 4150 4700 4250
+Wire Wire Line
+	4700 4250 5100 4250
+$Comp
+L power:GND #PWR?
+U 1 1 60489CE5
+P 4700 4450
+F 0 "#PWR?" H 4700 4200 50  0001 C CNN
+F 1 "GND" H 4705 4277 50  0000 C CNN
+F 2 "" H 4700 4450 50  0001 C CNN
+F 3 "" H 4700 4450 50  0001 C CNN
+	1    4700 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 4450 4700 4350
+Wire Wire Line
+	4700 4350 5100 4350
+$Comp
+L power:GND #PWR?
+U 1 1 6048A6BC
+P 5300 4950
+F 0 "#PWR?" H 5300 4700 50  0001 C CNN
+F 1 "GND" H 5305 4777 50  0000 C CNN
+F 2 "" H 5300 4950 50  0001 C CNN
+F 3 "" H 5300 4950 50  0001 C CNN
+	1    5300 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6048A79A
+P 5700 4950
+F 0 "#PWR?" H 5700 4700 50  0001 C CNN
+F 1 "GND" H 5705 4777 50  0000 C CNN
+F 2 "" H 5700 4950 50  0001 C CNN
+F 3 "" H 5700 4950 50  0001 C CNN
+	1    5700 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6048A98E
+P 6200 4950
+F 0 "#PWR?" H 6200 4700 50  0001 C CNN
+F 1 "GND" H 6205 4777 50  0000 C CNN
+F 2 "" H 6200 4950 50  0001 C CNN
+F 3 "" H 6200 4950 50  0001 C CNN
+	1    6200 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 4950 6200 4850
+Wire Wire Line
+	5700 4850 5700 4950
+Wire Wire Line
+	5300 4950 5300 4850
+Text HLabel 5050 3550 0    50   Input ~ 0
+BAUD_RATE
+Wire Wire Line
+	5050 3550 5100 3550
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 6048C459
+P 3950 3650
+F 0 "J?" H 3868 3325 50  0000 C CNN
+F 1 "Conn_01x03" H 3868 3416 50  0000 C CNN
+F 2 "" H 3950 3650 50  0001 C CNN
+F 3 "~" H 3950 3650 50  0001 C CNN
+	1    3950 3650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4150 3650 5100 3650
+$Comp
+L power:+3.3V #PWR?
+U 1 1 6048CE20
+P 4400 3450
+F 0 "#PWR?" H 4400 3300 50  0001 C CNN
+F 1 "+3.3V" H 4415 3623 50  0000 C CNN
+F 2 "" H 4400 3450 50  0001 C CNN
+F 3 "" H 4400 3450 50  0001 C CNN
+	1    4400 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 3450 4400 3550
+Wire Wire Line
+	4400 3550 4150 3550
+$Comp
+L power:GND #PWR?
+U 1 1 6048D63F
+P 4400 3850
+F 0 "#PWR?" H 4400 3600 50  0001 C CNN
+F 1 "GND" H 4405 3677 50  0000 C CNN
+F 2 "" H 4400 3850 50  0001 C CNN
+F 3 "" H 4400 3850 50  0001 C CNN
+	1    4400 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 3850 4400 3750
+Wire Wire Line
+	4400 3750 4150 3750
+$Comp
+L power:GND #PWR?
+U 1 1 6048DF6B
+P 4900 3150
+F 0 "#PWR?" H 4900 2900 50  0001 C CNN
+F 1 "GND" H 4905 2977 50  0000 C CNN
+F 2 "" H 4900 3150 50  0001 C CNN
+F 3 "" H 4900 3150 50  0001 C CNN
+	1    4900 3150
+	1    0    0    -1  
+$EndComp
+Text HLabel 5050 3450 0    50   Input ~ 0
+MODE
+Wire Wire Line
+	5050 3450 5100 3450
+Wire Wire Line
+	4900 3150 4900 3100
+Wire Wire Line
+	4900 3100 5000 3100
+Wire Wire Line
+	5000 3100 5000 3250
+Wire Wire Line
+	5000 3250 5100 3250
+$Comp
+L Device:R_Small R?
+U 1 1 60492B5E
+P 7450 3750
+F 0 "R?" V 7646 3750 50  0000 C CNN
+F 1 "1k" V 7555 3750 50  0000 C CNN
+F 2 "" H 7450 3750 50  0001 C CNN
+F 3 "~" H 7450 3750 50  0001 C CNN
+	1    7450 3750
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:LED_Small D?
+U 1 1 60492D63
+P 7800 3750
+F 0 "D?" H 7800 3985 50  0000 C CNN
+F 1 "LED_White" H 7800 3894 50  0000 C CNN
+F 2 "" V 7800 3750 50  0001 C CNN
+F 3 "~" V 7800 3750 50  0001 C CNN
+	1    7800 3750
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	7900 3750 8100 3750
+Wire Wire Line
+	7700 3750 7550 3750
+Wire Wire Line
+	7350 3750 6500 3750
+Text HLabel 6550 3650 2    50   Input ~ 0
+DISCOVERY_MODE
+Wire Wire Line
+	6550 3650 6500 3650
+Text HLabel 6550 3450 2    50   Input ~ 0
+FACTORY_RESET
+Wire Wire Line
+	6550 3450 6500 3450
+NoConn ~ 5600 4850
+NoConn ~ 6300 4850
+Text HLabel 6550 5250 2    50   Output ~ 0
+UART_ACTIVITY
+Wire Wire Line
+	6550 5250 6100 5250
+Wire Wire Line
+	6100 5250 6100 4850
+Wire Wire Line
+	6000 4850 6000 5350
+Wire Wire Line
+	6000 5350 6550 5350
+Wire Wire Line
+	6550 5450 5900 5450
+Wire Wire Line
+	5900 5450 5900 4850
+Wire Wire Line
+	5800 4850 5800 5550
+Wire Wire Line
+	5800 5550 6550 5550
+Text HLabel 6550 5450 2    50   Output ~ 0
+REMOTE_DTR
+Text HLabel 6550 5550 2    50   Output ~ 0
+REMOTE_RTS
+Text HLabel 6550 5350 2    50   Output ~ 0
+GPIO9
+$Comp
+L power:GND #PWR?
+U 1 1 6052D0AA
+P 8100 3850
+F 0 "#PWR?" H 8100 3600 50  0001 C CNN
+F 1 "GND" H 8105 3677 50  0000 C CNN
+F 2 "" H 8100 3850 50  0001 C CNN
+F 3 "" H 8100 3850 50  0001 C CNN
+	1    8100 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 3850 8100 3750
+$EndSCHEMATC
